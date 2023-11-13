@@ -15,7 +15,7 @@ variables:
   imageRepository: 'tetrisgameapp'
   containerRegistry: 'mahadevacr.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: 'latest'
+  tag: '$(Build.BuiId)'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
