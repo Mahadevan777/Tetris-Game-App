@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: k8stetrisgameapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8stetrisgameapp
+  template:
+    metadata:
+      labels:
+        app: k8stetrisgameapp 
+    spec:
+      containers:
+        - name: k8stetrisgameapp 
+          image: mahadevaecrk8s.azurecr.io/k8stetrisgameapp
+          ports:
+          - containerPort: 80
